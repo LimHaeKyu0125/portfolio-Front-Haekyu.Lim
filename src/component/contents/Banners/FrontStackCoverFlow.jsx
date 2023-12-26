@@ -11,7 +11,7 @@ import StackSql from '../../../assets/images/sql_image.png';
 
 //! require -> import 변경 (Webpack - tree shaking에 인해 빌드시 제거되는 이슈)
 
-export default function StackCoverFlow(props) {
+export default function FrontStackCoverFlow() {
   const stackItem = [
     {
       src: StackJS,
@@ -40,9 +40,9 @@ export default function StackCoverFlow(props) {
     },
   ];
   return (
-    <section className="front-stack-container">
+    <section className="stack-container">
       <Swiper
-        className="swiper"
+        className="stack-swiper"
         grabCursor={true}
         effect={'coverflow'}
         loop={true}
@@ -63,6 +63,17 @@ export default function StackCoverFlow(props) {
           );
         })}
       </Swiper>
+      <div className="stack-description">
+        <div className="stack-title">
+          <p>FRONT-STACK</p>
+        </div>
+        <ul className="stack-content">
+          <li>HTML</li>
+          <li>CSS/SCSS</li>
+          <li>JQUERY</li>
+          <li>JAVASCRIPT</li>
+        </ul>
+      </div>
     </section>
   );
 }
