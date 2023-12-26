@@ -1,0 +1,60 @@
+@import './variables';
+
+.header {
+  width: 100%;
+  max-width: rem(1440px);
+  height: auto;
+  margin: 0 auto;
+  @include tablet {
+    max-width: rem(1024px);
+  }
+  @include mobile {
+    max-width: rem(430px);
+  }
+  & .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // margin: 0 70px;
+    & .header-logo {
+      display: block;
+      width: 50px;
+      height: 50px;
+      background: url('../../images/logo.svg') no-repeat 50% 50%;
+    }
+    & .header-menu-list {
+      display: flex;
+      gap: 70px;
+      & li {
+        & a {
+          color: #000;
+          font-size: rem(20px);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.front-stack-container {
+  width: 100%;
+  max-width: rem(720px);
+  height: auto;
+  margin: 0 auto;
+  & .swiper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    & .swiper-slide {
+      width: 200px;
+      height: 300px;
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

@@ -1,27 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-import Hahaha from './component/essentials/header.jsx';
+import * as React from 'react';
+import GlobalStyle from './assets/styles/GlobalStyle.js'; // ! GlobalStyle.js : Reset css
+import Header from './component/essentials/header.jsx';
+import StackCoverFlow from './component/contents/Banners/StackCoverFlow.jsx';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Hahaha />
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-    </div>
+    <React.Fragment>
+      <GlobalStyle />
+      <Header />
+      <StackCoverFlow />
+    </React.Fragment>
   );
-}
+};
 
 export default App;

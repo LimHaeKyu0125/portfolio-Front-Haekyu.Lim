@@ -1,0 +1,32 @@
+//* Default Font Size
+$html-font-size: 16px;
+//* Screen Media
+$mobile: 430px;
+$tablet: 1024px;
+
+//! px to rem
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+}
+@function rem($pxValue) {
+  @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
+
+//! Screen Media
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: ($mobile + 1)) and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: ($tablet + 1)) {
+    @content;
+  }
+}

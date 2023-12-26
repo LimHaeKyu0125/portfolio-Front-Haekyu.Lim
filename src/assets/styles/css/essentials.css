@@ -1,0 +1,59 @@
+.header {
+  width: 100%;
+  max-width: 90rem;
+  height: auto;
+  margin: 0 auto;
+}
+@media (min-width: 431px) and (max-width: 1024px) {
+  .header {
+    max-width: 64rem;
+  }
+}
+@media (max-width: 430px) {
+  .header {
+    max-width: 26.875rem;
+  }
+}
+.header .header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .header-inner .header-logo {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url("../../images/logo.svg") no-repeat 50% 50%;
+}
+.header .header-inner .header-menu-list {
+  display: flex;
+  gap: 70px;
+}
+.header .header-inner .header-menu-list li a {
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.front-stack-container {
+  width: 100%;
+  max-width: 45rem;
+  height: auto;
+  margin: 0 auto;
+}
+.front-stack-container .swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.front-stack-container .swiper .swiper-slide {
+  width: 200px;
+  height: 300px;
+}
+.front-stack-container .swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

@@ -1,7 +1,26 @@
-export default function hahaha() {
+import '../../assets/styles/css/essentials.css';
+
+export default function header() {
   return (
-    <div>
-      <button>호호하하</button>
-    </div>
+    <header className="header">
+      <div className="header-inner">
+        <div className="header-logo">
+          <span className="blind">LOGO</span>
+        </div>
+        <nav className="nav-section">
+          <ul className="header-menu-list">
+            <li>
+              <a href="#">INFO</a>
+            </li>
+            <li>
+              <a href="#">HISTORY</a>
+            </li>
+            <li>
+              <a href="#">SKILL</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   );
 }
