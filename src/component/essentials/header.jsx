@@ -1,6 +1,6 @@
 import '../../assets/styles/css/essentials.css';
 
-export default function header() {
+export default function Header() {
   return (
     <header className="header">
       <div className="header-inner">

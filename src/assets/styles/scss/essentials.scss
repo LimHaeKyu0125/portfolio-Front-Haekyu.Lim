@@ -37,66 +37,24 @@
 }
 .stack-container {
   width: 100%;
-  // max-width: rem(720px);
+  max-width: rem(1440px);
   height: auto;
   margin: 0 auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 50px;
-  & .stack-swiper {
-    width: 100%;
-    max-width: rem(720px);
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    margin: 0;
-    & .swiper-slide {
-      width: 200px;
-      height: 300px;
-      & img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-    }
-  }
-  & .stack-description {
+  & .stack-item-list {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    position: relative;
-    & .stack-title {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    & .stack-item {
       display: block;
-      & p {
-        font-size: 20px;
-        font-weight: bold;
-      }
+      width: 200px;
+      height: 200px;
+      border-radius: 12px;
+      border: 1px solid #000;
     }
-    & .stack-content {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      position: relative;
-      & li {
-        position: relative;
-        padding-left: 10px;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 16px;
-        letter-spacing: -0.025em;
-      }
-      & li::before {
-        content: '';
-        position: absolute;
-        width: 4px;
-        height: 4px;
-        border-radius: 50%;
-        background-color: #000;
-        top: calc(50% - 2px);
-        left: 0;
-      }
+    & .stack-item:hover {
+      background-color: darkorchid;
     }
   }
 }

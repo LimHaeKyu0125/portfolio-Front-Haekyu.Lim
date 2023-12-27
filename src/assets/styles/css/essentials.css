@@ -37,65 +37,24 @@
 
 .stack-container {
   width: 100%;
+  max-width: 90rem;
   height: auto;
   margin: 0 auto;
+}
+.stack-container .stack-item-list {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 50px;
 }
-.stack-container .stack-swiper {
-  width: 100%;
-  max-width: 45rem;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  margin: 0;
-}
-.stack-container .stack-swiper .swiper-slide {
-  width: 200px;
-  height: 300px;
-}
-.stack-container .stack-swiper .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.stack-container .stack-description {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  position: relative;
-}
-.stack-container .stack-description .stack-title {
+.stack-container .stack-item-list .stack-item {
   display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  border: 1px solid #000;
 }
-.stack-container .stack-description .stack-title p {
-  font-size: 20px;
-  font-weight: bold;
-}
-.stack-container .stack-description .stack-content {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  position: relative;
-}
-.stack-container .stack-description .stack-content li {
-  position: relative;
-  padding-left: 10px;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 16px;
-  letter-spacing: -0.025em;
-}
-.stack-container .stack-description .stack-content li::before {
-  content: "";
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: #000;
-  top: calc(50% - 2px);
-  left: 0;
+.stack-container .stack-item-list .stack-item:hover {
+  background-color: darkorchid;
 }
