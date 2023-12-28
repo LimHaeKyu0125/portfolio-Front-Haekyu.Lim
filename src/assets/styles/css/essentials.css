@@ -37,24 +37,96 @@
 
 .stack-container {
   width: 100%;
+  height: 100%;
+  padding: 50px 0;
+  background-color: #000;
+}
+.stack-container .stack-item-box {
   max-width: 90rem;
-  height: auto;
   margin: 0 auto;
 }
-.stack-container .stack-item-list {
+.stack-container .stack-item-box .stack-container-title {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+  font-size: 50px;
+  font-weight: 700;
+  color: #fff;
+}
+.stack-container .stack-item-box .stack-item-list {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   gap: 50px;
 }
-.stack-container .stack-item-list .stack-item {
+.stack-container .stack-item-box .stack-item-list .stack-item {
   display: block;
+  position: relative;
   width: 200px;
   height: 200px;
+  border: 1px solid darkgray;
   border-radius: 12px;
-  border: 1px solid #000;
+  background-color: darkgray;
+  animation: fadeindown 1.7s;
+  -moz-animation: fadeindown 1.7s; /* Firefox */
+  -webkit-animation: fadeindown 1.7s; /* Safari and Chrome */
+  -o-animation: fadeindown 1.7s; /* Opera */
 }
-.stack-container .stack-item-list .stack-item:hover {
-  background-color: darkorchid;
+.stack-container .stack-item-box .stack-item-list .stack-item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+}
+.stack-container .stack-item-box .stack-item-list .stack-item:hover {
+  border-color: rgb(230, 184, 69);
+  background-color: rgb(230, 184, 69);
+}
+
+@keyframes fadeindown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+/* Firefox */
+@-moz-keyframes fadeindown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+/* Safari and Chrome */
+@-webkit-keyframes fadeindown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+/* Opera */
+@-o-keyframes fadeindown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
 }

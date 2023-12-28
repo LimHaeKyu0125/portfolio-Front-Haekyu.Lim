@@ -1,10 +1,12 @@
 import '../../assets/styles/css/essentials.css';
-import StackFlexBox from '../contents/Skill/StackFlexBox';
+import MySkill from '../contents/MySkill';
+import History from '../contents/History';
 
 export default function Main() {
   return (
     <div className="main-body-container">
-      <StackFlexBox />
+      <History />
+      <MySkill />
     </div>
   );
 }

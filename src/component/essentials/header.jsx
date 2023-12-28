@@ -16,7 +16,7 @@ export default function Header() {
               <a href="#">HISTORY</a>
             </li>
             <li>
-              <a href="#">SKILL</a>
+              <a href="#">MY SKILL</a>
             </li>
           </ul>
         </nav>
