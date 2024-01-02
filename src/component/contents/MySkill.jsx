@@ -93,14 +93,13 @@ export default function MySkill() {
       <section className="stack-container">
         <div className="stack-item-box">
           <div className="stack-container-title">
-            My Skill<span className="blind">My Skill</span>
+            FLEX BOX<span className="blind">My Skill</span>
           </div>
           <ul className="stack-item-list">
             {stackItems.map((item, idx) => {
               return (
                 <li className="stack-item" key={idx}>
                   <img src={item.src} alt={item.alt} />
-                  <span className="blind">{item.title}</span>
                 </li>
               );
             })}
