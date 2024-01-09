@@ -1,12 +1,19 @@
 @import './variables';
 
+// :root {
+//   --vh: 100%;
+// }
+
 .header {
   width: 100%;
   max-width: rem(1440px);
   height: 50px;
   position: fixed;
   z-index: 3;
-  padding: 0 rem(240px);
+  // padding: 0 rem(240px);
+  margin: 0 auto;
+  left: 0;
+  right: 0;
   @include tablet {
     max-width: rem(1024px);
   }
@@ -39,29 +46,77 @@
     }
   }
 }
+
+// Main - Body
+.main-body-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 // Section - Info
 // Section - History
 .history-container {
-  // position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
   width: 100%;
   height: 100%;
-  padding: 50px 0;
-  background-color: #000;
-  & .history-container-title {
-    color: #fff;
-  }
-  & .history-container-description {
-    color: #fff;
+  & .history-item-box {
+    & .history-container-title {
+      font-size: 50px;
+      font-weight: 700;
+      color: #fff;
+      padding-bottom: 50px;
+    }
+    & .history-item-list {
+      position: relative;
+      & .history-item {
+        position: relative;
+        width: 50%;
+        padding: 10px 45px;
+        box-sizing: border-box;
+        & .history-item-content {
+          border-radius: 12px;
+          padding: 20px;
+          color: #000;
+          background-color: #fff;
+          & .history-year {
+            font-size: 24px;
+            font-weight: 600;
+            padding-bottom: 15px;
+          }
+          & .history-description {
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+      }
+      & .right {
+        left: 50%;
+      }
+      & .left {
+        left: 0%;
+      }
+    }
+    & .history-item-list::before {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #fff;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+    }
   }
 }
 // Section - my stack
 .stack-container {
-  // position: fixed;
-  // visibility: hidden;
-  width: 100%;
-  height: 100%;
-  padding: 50px 0;
+  display: flex;
+  align-items: center;
   background-color: #000;
+  width: 100%;
+  height: 100vh;
   & .stack-item-box {
     max-width: rem(1440px);
     margin: 0 auto;
@@ -72,6 +127,10 @@
       font-size: 50px;
       font-weight: 700;
       color: #fff;
+      animation: fadeindown 1.7s;
+      -moz-animation: fadeindown 1.7s; /* Firefox */
+      -webkit-animation: fadeindown 1.7s; /* Safari and Chrome */
+      -o-animation: fadeindown 1.7s; /* Opera */
     }
     & .stack-item-list {
       display: flex;

@@ -4,7 +4,9 @@
   height: 50px;
   position: fixed;
   z-index: 3;
-  padding: 0 15rem;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
 }
 @media (min-width: 431px) and (max-width: 1024px) {
   .header {
@@ -38,24 +40,72 @@
   font-weight: 500;
 }
 
-.history-container {
+.main-body-container {
   width: 100%;
   height: 100%;
-  padding: 50px 0;
+  position: relative;
+}
+
+.history-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #000;
+  width: 100%;
+  height: 100%;
 }
-.history-container .history-container-title {
+.history-container .history-item-box .history-container-title {
+  font-size: 50px;
+  font-weight: 700;
   color: #fff;
+  padding-bottom: 50px;
 }
-.history-container .history-container-description {
-  color: #fff;
+.history-container .history-item-box .history-item-list {
+  position: relative;
+}
+.history-container .history-item-box .history-item-list .history-item {
+  position: relative;
+  width: 50%;
+  padding: 10px 45px;
+  box-sizing: border-box;
+}
+.history-container .history-item-box .history-item-list .history-item .history-item-content {
+  border-radius: 12px;
+  padding: 20px;
+  color: #000;
+  background-color: #fff;
+}
+.history-container .history-item-box .history-item-list .history-item .history-item-content .history-year {
+  font-size: 24px;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+.history-container .history-item-box .history-item-list .history-item .history-item-content .history-description {
+  font-size: 16px;
+  font-weight: 500;
+}
+.history-container .history-item-box .history-item-list .right {
+  left: 50%;
+}
+.history-container .history-item-box .history-item-list .left {
+  left: 0%;
+}
+.history-container .history-item-box .history-item-list::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
 }
 
 .stack-container {
-  width: 100%;
-  height: 100%;
-  padding: 50px 0;
+  display: flex;
+  align-items: center;
   background-color: #000;
+  width: 100%;
+  height: 100vh;
 }
 .stack-container .stack-item-box {
   max-width: 90rem;
@@ -68,6 +118,10 @@
   font-size: 50px;
   font-weight: 700;
   color: #fff;
+  animation: fadeindown 1.7s;
+  -moz-animation: fadeindown 1.7s; /* Firefox */
+  -webkit-animation: fadeindown 1.7s; /* Safari and Chrome */
+  -o-animation: fadeindown 1.7s; /* Opera */
 }
 .stack-container .stack-item-box .stack-item-list {
   display: flex;
