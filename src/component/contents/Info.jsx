@@ -1,4 +1,5 @@
 import React from 'react';
+import ExImage from '../../assets/images/ex_image.jpg';
 
 export default function Info() {
   return (
@@ -10,7 +11,7 @@ export default function Info() {
           </div>
           <div className="info-item-list">
             <div className="info-picture">
-              <img src="" alt="test" />
+              <img src={ExImage} alt="test" />
             </div>
             <ul className="info-item-content">
               <li className="info-description">
@@ -18,6 +19,10 @@ export default function Info() {
                 Blanditiis aspernatur similique voluptatibus ab laudantium,
                 asperiores est ut? Odit quisquam laudantium rerum molestiae
                 repellendus, nemo unde expedita nesciunt perspiciatis
+                consectetur aut. Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Blanditiis aspernatur similique voluptatibus
+                ab laudantium, asperiores est ut? Odit quisquam laudantium rerum
+                molestiae repellendus, nemo unde expedita nesciunt perspiciatis
                 consectetur aut.
               </li>
               <li className="info-description">

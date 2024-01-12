@@ -49,7 +49,7 @@
 .info-container {
   display: flex;
   align-items: center;
-  background-color: #000;
+  background-color: #fff;
   width: 100%;
   height: 100vh;
 }
@@ -62,39 +62,46 @@
   justify-content: flex-start;
   font-size: 50px;
   font-weight: 700;
-  color: #fff;
+  color: #000;
   padding-bottom: 50px;
 }
 .info-container .info-item-box .info-item-list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 0 45px;
 }
 .info-container .info-item-box .info-item-list .info-picture {
   width: 100%;
-  max-width: 32.5rem;
-  background-color: #fff;
-  border: 1px solid #fff;
+  max-width: 25rem;
+  height: 25rem;
   border-radius: 12px;
 }
 .info-container .info-item-box .info-item-list .info-picture img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  border-radius: 12px;
 }
 .info-container .info-item-box .info-item-list .info-item-content {
   width: 50%;
 }
 .info-container .info-item-box .info-item-list .info-item-content .info-description {
   font-size: 16px;
-  color: #fff;
+  font-weight: 500;
+  color: #000;
+  line-height: 22px;
+  letter-spacing: -0.025em;
+}
+.info-container .info-item-box .info-item-list .info-item-content .info-description + .info-description {
+  padding-top: 70px;
 }
 
 .history-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-color: #fff;
   width: 100%;
   height: 100%;
 }
@@ -105,7 +112,7 @@
 .history-container .history-item-box .history-container-title {
   font-size: 50px;
   font-weight: 700;
-  color: #fff;
+  color: #000;
   padding-bottom: 50px;
 }
 .history-container .history-item-box .history-item-list {
@@ -118,6 +125,7 @@
   box-sizing: border-box;
 }
 .history-container .history-item-box .history-item-list .history-item .history-item-content {
+  border: 1px solid #000;
   border-radius: 12px;
   padding: 20px;
   color: #000;
@@ -131,6 +139,8 @@
 .history-container .history-item-box .history-item-list .history-item .history-item-content .history-description {
   font-size: 16px;
   font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.025em;
 }
 .history-container .history-item-box .history-item-list .right {
   left: 50%;
@@ -142,7 +152,7 @@
   content: "";
   position: absolute;
   width: 6px;
-  background-color: #fff;
+  background-color: #000;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -151,7 +161,7 @@
 .stack-container {
   display: flex;
   align-items: center;
-  background-color: #000;
+  background-color: #fff;
   width: 100%;
   height: 100vh;
 }
@@ -165,7 +175,7 @@
   padding-bottom: 50px;
   font-size: 50px;
   font-weight: 700;
-  color: #fff;
+  color: #000;
   animation: fadeindown 1.7s;
   -moz-animation: fadeindown 1.7s; /* Firefox */
   -webkit-animation: fadeindown 1.7s; /* Safari and Chrome */
@@ -181,11 +191,11 @@
 .stack-container .stack-item-box .stack-item-list .stack-item {
   display: block;
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 10.625rem;
+  height: 10.625rem;
   border: 1px solid darkgray;
   border-radius: 12px;
-  background-color: darkgray;
+  background-color: #fff;
   animation: fadeindown 1.7s;
   -moz-animation: fadeindown 1.7s; /* Firefox */
   -webkit-animation: fadeindown 1.7s; /* Safari and Chrome */
@@ -201,8 +211,8 @@
   border-radius: 12px;
 }
 .stack-container .stack-item-box .stack-item-list .stack-item:hover {
-  border-color: rgb(230, 184, 69);
-  background-color: rgb(230, 184, 69);
+  border-color: #9fe2bf;
+  background-color: #9fe2bf;
 }
 
 @keyframes fadeindown {

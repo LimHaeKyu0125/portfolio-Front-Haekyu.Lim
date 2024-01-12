@@ -19,7 +19,7 @@ const App = () => {
   return (
     <React.Fragment>
       <GlobalStyle />
-      <Header />
+      {/* <Header /> */}
       <Main />
     </React.Fragment>
   );
